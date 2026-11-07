@@ -27,7 +27,7 @@ There are two ways. Option 1 needs no files or folders; if it doesn't work for y
    to the **Plugins** tab. In **Plugin registry**, paste
 
    ```
-   https://raw.githubusercontent.com/NadeenAhmad/Ontology_Copilot_0.9.24/main/ontology-copilot.repository
+   https://raw.githubusercontent.com/NadeenAhmad/protege-ontology-copilot/main/ontology-copilot.repository
    ```
 
    and click **OK**. Protégé's standard plugins stay in the list.

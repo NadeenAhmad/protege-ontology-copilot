@@ -1,4 +1,4 @@
 // Plugin list for Protégé: Settings / Preferences ▸ Plugins ▸ "Plugin registry".
 // The second line keeps Protégé's standard plugins in the list as well.
-https://raw.githubusercontent.com/NadeenAhmad/Ontology_Copilot_0.9.24/main/update.properties
+https://raw.githubusercontent.com/NadeenAhmad/protege-ontology-copilot/main/update.properties
 https://raw.githubusercontent.com/protegeproject/autoupdate/master/update-info/5.0.0/plugins.repository
