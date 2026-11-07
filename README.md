@@ -5,13 +5,13 @@
   </picture>
 </div>
 
-# Ontology Copilot 0.9.28
+# Ontology Copilot 
 
 A plugin for [Protégé](https://protege.stanford.edu) that helps you draft and edit ontologies with an LLM assistant,
-using methods from peer-reviewed research (NeOn-GPT, Ontogenia, RIGOR-Lite and a direct draft). Every change is shown
+using methods from peer-reviewed research (NeOn-GPT, Ontogenia, RIGOR-Lite, and a direct draft). Every change is shown
 in Change Preview first; nothing changes in your ontology until you press Apply.
 
-**New in 0.9.28:** NeOn-GPT and Ontogenia drafts can be checked for common modelling mistakes with [OOPS!](https://oops.linkeddata.es). The plugin asks once; the check sends the draft with your ontology to oops.linkeddata.es, and you can skip it while it runs. For NeOn-GPT, **Ask NeOn-GPT to fix the critical ones** sends one repair request, and you review the result like any draft. A new **Checks** tab shows each check on one line (✓, ⚠ or ✗), and the reasoner still runs when some rows have a problem. A property used both as a link and as a value can be kept as one or the other with one click. The wording is plainer throughout, and Ontogenia's inputs page and Approve dialog are easier to follow.
+**New in 0.9.28:** NeOn-GPT and Ontogenia drafts can be checked for common modeling mistakes with [OOPS!](https://oops.linkeddata.es). The plugin asks once; the check sends the draft with your ontology to oops.linkeddata.es, and you can skip it while it runs. For NeOn-GPT, **Ask NeOn-GPT to fix the critical ones** sends one repair request, and you review the result like any draft. A new **Checks** tab shows each check on one line (✓, ⚠ or ✗), and the reasoner still runs when some rows have a problem. A property used both as a link and as a value can be kept as one or the other with one click. The wording is plainer throughout, and Ontogenia's inputs page and Approve dialog are easier to follow.
 
 **Since 0.9.27:** pop-ups you can resize; a graph you can zoom and open in its own window; run progress that keeps your place while you scroll; and an **Install RDFLib** button (Settings ▸ Checks) for the file check NeOn-GPT uses. If you installed an earlier version with Option 1, **File ▸ Check for plugins…** offers 0.9.28 as an update. The install screenshots were taken with 0.9.24; the steps are the same.
 
@@ -32,7 +32,7 @@ There are two ways. Option 1 needs no files or folders; if it doesn't work for y
 
    and click **OK**. Protégé's standard plugins stay in the list.
 
-   <img src="images/install/1-plugin-registry.png" width="560" alt="Protégé preferences, Plugins tab, with the plugin registry address">
+   <img src="images/install/1-plugin-registry.png" width="560" alt=" Protégé preferences, Plugins tab, with the plugin registry address">
 
 2. Choose **File ▸ Check for plugins…**, tick **Ontology Copilot** and click **Install**.
 
@@ -40,7 +40,7 @@ There are two ways. Option 1 needs no files or folders; if it doesn't work for y
 
 3. Protégé says the plugin takes effect at the next start. Click **OK** and restart Protégé.
 
-   <img src="images/install/3-restart-message.png" width="360" alt="Updates will take effect when you next start Protege">
+   <img src="images/install/3-restart-message.png" width="360" alt=" Updates will take effect when you next start Protege">
 
 Protégé saves plugins installed this way in your user folder (`~/.Protege/plugins`). If you installed an older version
 by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so Protégé doesn't find two.
@@ -91,9 +91,9 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 
 - Your API key stays on your computer: in the macOS Keychain, or only for the current session.
 - The plugin keeps a local activity log of what you do in it. It is never sent anywhere (see below).
-- OOPS! check: only if you agree (the plugin asks once; change it in Settings ▸ Checks), each NeOn-GPT and Ontogenia
+- OOPS! Check: only if you agree (the plugin asks once; change it in Settings ▸ Checks), each NeOn-GPT and Ontogenia
   draft is sent with your ontology to the OOPS! service at oops.linkeddata.es (Universidad Politécnica de Madrid).
-  Without a yes, nothing is sent there, unless you click **Check now** for one draft.
+  Without a yes, nothing is sent there unless you click **Check now** for a single draft.
 
 ### Activity log
 
