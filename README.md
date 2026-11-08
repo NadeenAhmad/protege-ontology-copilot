@@ -13,7 +13,7 @@ in Change Preview first; nothing changes in your ontology until you press Apply.
 
 **New in 0.9.28:** NeOn-GPT and Ontogenia drafts can be checked for common modeling mistakes with [OOPS!](https://oops.linkeddata.es). The plugin asks once; the check sends the draft with your ontology to oops.linkeddata.es, and you can skip it while it runs. For NeOn-GPT, **Ask NeOn-GPT to fix the critical ones** sends one repair request, and you review the result like any draft. A new **Checks** tab shows each check on one line (✓, ⚠ or ✗), and the reasoner still runs when some rows have a problem. A property used both as a link and as a value can be kept as one or the other with one click. The wording is plainer throughout, and Ontogenia's inputs page and Approve dialog are easier to follow.
 
-**Since 0.9.27:** pop-ups you can resize; a graph you can zoom and open in its own window; run progress that keeps your place while you scroll; and an **Install RDFLib** button (Settings ▸ Checks) for the file check NeOn-GPT uses. If you installed an earlier version with Option 1, **File ▸ Check for plugins…** offers 0.9.28 as an update. The install screenshots were taken with 0.9.24; the steps are the same.
+Already installed it with Option 1? **File ▸ Check for plugins…** offers the update.
 
 ## Install
 
@@ -30,21 +30,20 @@ There are two ways. Option 1 needs no files or folders; if it doesn't work for y
    https://raw.githubusercontent.com/NadeenAhmad/protege-ontology-copilot/main/ontology-copilot.repository
    ```
 
-   and click **OK**. Protégé's standard plugins stay in the list. (This repository used to be called
-   `Ontology_Copilot_0.9.24`; if you added its old address before, it still works.)
+   and click **OK**. Protégé's standard plugins stay in the list.
 
    <img src="images/install/1-plugin-registry.png" width="560" alt=" Protégé preferences, Plugins tab, with the plugin registry address">
 
 2. Choose **File ▸ Check for plugins…**, tick **Ontology Copilot** and click **Install**.
 
-   <img src="images/install/2-check-for-plugins.png" width="440" alt="Protégé's plugin installer with Ontology Copilot 0.9.24 ticked">
+   <img src="images/install/2-check-for-plugins.png" width="440" alt="Protégé's plugin installer with Ontology Copilot ticked">
 
 3. Protégé says the plugin takes effect at the next start. Click **OK** and restart Protégé.
 
    <img src="images/install/3-restart-message.png" width="360" alt=" Updates will take effect when you next start Protege">
 
-Protégé saves plugins installed this way in your user folder (`~/.Protege/plugins`). If you installed an older version
-by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so Protégé doesn't find two.
+Protégé saves plugins installed this way in your user folder (`~/.Protege/plugins`). If you installed the plugin
+by hand before (Option 2), delete that copy from Protégé's `plugins` folder first, so Protégé doesn't find two.
 
 ### Option 2: by hand
 
@@ -55,7 +54,7 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 
    Delete any older `protege-ontology-copilot-…jar` there.
 
-   <img src="images/install/7-plugins-folder.png" width="480" alt="Protégé's plugins folder with protege-ontology-copilot-0.9.24.jar">
+   <img src="images/install/7-plugins-folder.png" width="480" alt="Protégé's plugins folder with the Ontology Copilot jar">
 
 3. Start Protégé.
 
