@@ -11,7 +11,7 @@ A plugin for [Protégé](https://protege.stanford.edu) that helps you draft and 
 using methods from peer-reviewed research (NeOn-GPT, Ontogenia, RIGOR-Lite, and a direct draft). Every change is shown
 in Change Preview first; nothing changes in your ontology until you press Apply.
 
-**New in 0.9.28:** NeOn-GPT and Ontogenia drafts can be checked for common modeling mistakes with [OOPS!](https://oops.linkeddata.es). The plugin asks once; the check sends the draft with your ontology to oops.linkeddata.es, and you can skip it while it runs. For NeOn-GPT, **Ask NeOn-GPT to fix the critical ones** sends one repair request, and you review the result like any draft. A new **Checks** tab shows each check on one line (✓, ⚠ or ✗), and the reasoner still runs when some rows have a problem. A property used both as a link and as a value can be kept as one or the other with one click. The wording is plainer throughout, and Ontogenia's inputs page and Approve dialog are easier to follow.
+**New in 0.9.29:** clearer names: step 1 is now **Purpose & scope**, the checks tab is **Quality check**, and **Change Explanation** sits right next to Change Preview. Every slow action shows that it is working, with changing words and the seconds, and the Copilot mark appears in the chat and the top bar. NeOn-GPT now keeps its own fix when RDFLib isn't installed (before, it threw the fix away), the reasoner checks your ontology again after Apply, and a critical OOPS! mistake can still be fixed after Apply. New one-click **Declare them** for classes or properties that are used but never declared, a plain window before Apply, chat buttons that follow what you do in Change Preview, and a simpler step 3.
 
 Already installed it with Option 1? **File ▸ Check for plugins…** offers the update.
 
@@ -42,12 +42,13 @@ There are two ways. Option 1 needs no files or folders; if it doesn't work for y
 
    <img src="images/install/3-restart-message.png" width="360" alt=" Updates will take effect when you next start Protege">
 
-Protégé saves plugins installed this way in your user folder (`~/.Protege/plugins`). If you installed the plugin
-by hand before (Option 2), delete that copy from Protégé's `plugins` folder first, so Protégé doesn't find two.
+Protégé puts plugins installed this way in its own `plugins` folder or in your user folder (`~/.Protege/plugins`). If you
+installed the plugin by hand before (Option 2), delete that copy from Protégé's `plugins` folder first, so Protégé
+doesn't find two.
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.28.jar`](protege-ontology-copilot-0.9.28.jar).
+1. Download [`protege-ontology-copilot-0.9.29.jar`](protege-ontology-copilot-0.9.29.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -75,15 +76,15 @@ by hand before (Option 2), delete that copy from Protégé's `plugins` folder fi
    Keychain** on macOS), then **Test connection**. Ollama needs no key. The plugin remembers the provider and model
    for next time; the key only if you saved it to the Keychain.
 
-   Further down, under **Checks**, click **Install RDFLib** if it says the file check isn't installed. It needs
+   Further down, under **Quality check**, click **Install RDFLib** if it says the file check isn't installed. It needs
    Python 3 and internet, and installs only into the plugin's own folder (`~/.ontology-copilot/python`). Without it
-   everything still works; NeOn-GPT then skips this one check and tells you so. The same section has **Check drafts
+   everything still works; the file check is skipped, and the plugin says so wherever it matters. The same section has **Check drafts
    for common modelling mistakes (OOPS!)**; the plugin also asks about it when your first NeOn-GPT or Ontogenia draft
    arrives.
 
    <img src="images/install/6-settings.png" width="460" alt="Ontology Copilot settings: provider, model, endpoint">
 
-4. Follow the steps at the top: **1 Brief › 2 Inputs › 3 Generate › 4 Review & apply**. **Next** and **Back** are at
+4. Follow the steps at the top: **1 Purpose & scope › 2 Inputs › 3 Generate › 4 Review & apply**. **Next** and **Back** are at
    the bottom of each page; when Next is grey, the reason is written beside it. Nothing changes in your ontology until
    you click **Apply** in step 4, and **Undo** there takes it out again.
 
@@ -91,7 +92,7 @@ by hand before (Option 2), delete that copy from Protégé's `plugins` folder fi
 
 - Your API key stays on your computer: in the macOS Keychain, or only for the current session.
 - The plugin keeps a local activity log of what you do in it. It is never sent anywhere (see below).
-- OOPS! Check: only if you agree (the plugin asks once; change it in Settings ▸ Checks), each NeOn-GPT and Ontogenia
+- OOPS! Check: only if you agree (the plugin asks once; change it in Settings ▸ Quality check), each NeOn-GPT and Ontogenia
   draft is sent with your ontology to the OOPS! service at oops.linkeddata.es (Universidad Politécnica de Madrid).
   Without a yes, nothing is sent there unless you click **Check now** for a single draft.
 
@@ -110,7 +111,7 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.28.jar`: the plugin.
+- `protege-ontology-copilot-0.9.29.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos and screenshots used here.
 
