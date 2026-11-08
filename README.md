@@ -30,7 +30,8 @@ There are two ways. Option 1 needs no files or folders; if it doesn't work for y
    https://raw.githubusercontent.com/NadeenAhmad/protege-ontology-copilot/main/ontology-copilot.repository
    ```
 
-   and click **OK**. Protégé's standard plugins stay in the list.
+   and click **OK**. Protégé's standard plugins stay in the list. (This repository used to be called
+   `Ontology_Copilot_0.9.24`; if you added its old address before, it still works.)
 
    <img src="images/install/1-plugin-registry.png" width="560" alt=" Protégé preferences, Plugins tab, with the plugin registry address">
 
