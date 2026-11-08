@@ -11,7 +11,11 @@ A plugin for [Protégé](https://protege.stanford.edu) that helps you draft and 
 using methods from peer-reviewed research (NeOn-GPT, Ontogenia, RIGOR-Lite, and a direct draft). Every change is shown
 in Change Preview first; nothing changes in your ontology until you press Apply.
 
-**New in 0.9.29:** clearer names: step 1 is now **Purpose & scope**, the checks tab is **Quality check**, and **Change Explanation** sits right next to Change Preview. Every slow action shows that it is working, with changing words and the seconds, and the Copilot mark appears in the chat and the top bar. NeOn-GPT now keeps its own fix when RDFLib isn't installed (before, it threw the fix away), the reasoner checks your ontology again after Apply, and a critical OOPS! mistake can still be fixed after Apply. New one-click **Declare them** for classes or properties that are used but never declared, a plain window before Apply, chat buttons that follow what you do in Change Preview, and a simpler step 3.
+<p align="center">
+  <img src="images/demo.gif" width="760" alt="Ontology Copilot in Protégé: Purpose & scope is filled in, a method is recommended and approved, Gemini 3.7 Flash drafts the ontology, the draft is reviewed in Change Preview and the Graph and applied, then the chat adds three subclasses of Bike">
+</p>
+
+**New in 0.9.30:** the plugin starts with **Gemini 3.7 Flash** through OpenRouter, and until a model is set up, a bar at the top says so, with **Open Settings** right there. The tutorial's last button takes you to Settings, and buttons that need the model ask for it instead of failing. Picking another method than the recommended one now shows that method's description and paper. Two tabs have clearer names: **CQs** (NeOn-GPT's competency questions, including your edits) and **Manchester Syntax**.
 
 Already installed it with Option 1? **File ▸ Check for plugins…** offers the update.
 
@@ -48,7 +52,7 @@ doesn't find two.
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.29.jar`](protege-ontology-copilot-0.9.29.jar).
+1. Download [`protege-ontology-copilot-0.9.30.jar`](protege-ontology-copilot-0.9.30.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -64,17 +68,19 @@ doesn't find two.
 1. Open or create an ontology and click the **Ontology Copilot** tab. If you don't see it (this can happen when you
    used Protégé before), choose **Window ▸ Tabs ▸ Ontology Copilot**.
 
-   <img src="images/install/4-copilot-tab.png" width="640" alt="The Ontology Copilot tab: the four steps at the top, the chat on the right">
+   <img src="images/install/4-copilot-tab.png" width="640" alt="The Ontology Copilot tab at a first start: the bar asking to set up the AI model, the four steps, the chat on the right">
 
 2. A short guided tour starts the first time. Skip it, or click through its 11 steps; the **Tutorial** button (top
    right) starts it again.
 
    <img src="images/install/5b-welcome-card.png" width="320" alt="The guided tour's welcome card">
 
-3. Click **Settings…** (top right), choose a **Provider** (OpenRouter, OpenAI, Anthropic, Google Gemini or a local
-   Ollama) and a **Model**, paste your API key further down and click **Use for this session only** (or **Save to
-   Keychain** on macOS), then **Test connection**. Ollama needs no key. The plugin remembers the provider and model
-   for next time; the key only if you saved it to the Keychain.
+3. Until a model is set up, a bar at the top says **Set up your AI model first**. Click **Open Settings** in that bar
+   (or **Settings…**, top right). The plugin starts with **Gemini 3.7 Flash** through **OpenRouter**: paste your
+   OpenRouter API key further down and click **Use for this session only** (or **Save to Keychain** on macOS), then
+   **Test connection**. To use another model, choose a **Provider** (OpenRouter, OpenAI, Anthropic, Google Gemini or a
+   local Ollama) and a **Model**; Ollama needs no key. The plugin remembers the provider and model for next time; the
+   key only if you saved it to the Keychain.
 
    Further down, under **Quality check**, click **Install RDFLib** if it says the file check isn't installed. It needs
    Python 3 and internet, and installs only into the plugin's own folder (`~/.ontology-copilot/python`). Without it
@@ -111,9 +117,9 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.29.jar`: the plugin.
+- `protege-ontology-copilot-0.9.30.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
-- `images/`: the logos and screenshots used here.
+- `images/`: the logos, screenshots and the demo GIF used here.
 
 ## Licence
 
