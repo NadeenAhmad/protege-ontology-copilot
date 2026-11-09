@@ -12,10 +12,10 @@ using methods from peer-reviewed research (NeOn-GPT, Ontogenia, RIGOR-Lite, and 
 in Change Preview first; nothing changes in your ontology until you press Apply.
 
 <p align="center">
-  <img src="images/demo.gif" width="760" alt="Ontology Copilot in Protégé: Purpose & scope is filled in, a method is recommended and approved, Gemini 3.7 Flash drafts the ontology, the draft is reviewed in Change Preview and the Graph and applied, then the chat adds three subclasses of Bike">
+  <img src="images/demo.gif" width="760" alt="Ontology Copilot in Protégé: Purpose & scope is filled in, a method is recommended and approved, GPT-5.6 Luna drafts the ontology, the draft is reviewed in Change Preview and the Graph and applied, then the chat adds three subclasses of Bike">
 </p>
 
-**New in 0.9.30:** the plugin starts with **Gemini 3.7 Flash** through OpenRouter, and until a model is set up, a bar at the top says so, with **Open Settings** right there. The tutorial's last button takes you to Settings, and buttons that need the model ask for it instead of failing. Picking another method than the recommended one now shows that method's description and paper. Two tabs have clearer names: **CQs** (NeOn-GPT's competency questions, including your edits) and **Manchester Syntax**.
+**New in 0.9.31:** the default model is **GPT-5.6 Luna** through OpenRouter, and at every start a bar asks you to check your AI model. Step 2 offers only the inputs the chosen method uses, and you type CQs straight into a box called **CQs (one per line)**; in a small window that box no longer gets squeezed. Direct NL→OWL keeps running when you look at another step, and **Start over** saves your ontology and opens a new, empty one. Clearer names in step 1: **Ontology engineering methodology** (only used to recommend a method) and **LLM-based Ontology Generation Method**.
 
 Already installed it with Option 1? **File ▸ Check for plugins…** offers the update.
 
@@ -38,21 +38,28 @@ There are two ways. Option 1 needs no files or folders; if it doesn't work for y
 
    <img src="images/install/1-plugin-registry.png" width="560" alt=" Protégé preferences, Plugins tab, with the plugin registry address">
 
-2. Choose **File ▸ Check for plugins…**, tick **Ontology Copilot** and click **Install**.
+2. Choose **File ▸ Check for plugins…**. In the list, find **Ontology Copilot** and tick its box in the **Install**
+   column (far left). Then click **Install**. Without the tick, nothing is installed.
 
    <img src="images/install/2-check-for-plugins.png" width="440" alt="Protégé's plugin installer with Ontology Copilot ticked">
 
-3. Protégé says the plugin takes effect at the next start. Click **OK** and restart Protégé.
+3. Protégé says the plugin takes effect at the next start. Click **OK**, **quit Protégé and start it again**. Before
+   the restart the plugin does not work yet: it may already be listed under Window ▸ Views, but clicking it does
+   nothing.
 
    <img src="images/install/3-restart-message.png" width="360" alt=" Updates will take effect when you next start Protege">
 
-Protégé puts plugins installed this way in its own `plugins` folder or in your user folder (`~/.Protege/plugins`). If you
-installed the plugin by hand before (Option 2), delete that copy from Protégé's `plugins` folder first, so Protégé
-doesn't find two.
+After the restart, click the **Ontology Copilot** tab. If there is no such tab, choose **Window ▸ Tabs ▸ Ontology
+Copilot**.
+
+Protégé puts plugins installed this way in its own `plugins` folder, or, when it can't write there, in your user
+folder (`~/.Protege/plugins`). On a Mac this happens when Protégé runs from the Downloads folder; moving Protégé to
+Applications first avoids it, but both work. If you installed the plugin by hand before (Option 2), delete that copy
+from Protégé's `plugins` folder first, so Protégé doesn't find two.
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.30.jar`](protege-ontology-copilot-0.9.30.jar).
+1. Download [`protege-ontology-copilot-0.9.31.jar`](protege-ontology-copilot-0.9.31.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -75,8 +82,8 @@ doesn't find two.
 
    <img src="images/install/5b-welcome-card.png" width="320" alt="The guided tour's welcome card">
 
-3. Until a model is set up, a bar at the top says **Set up your AI model first**. Click **Open Settings** in that bar
-   (or **Settings…**, top right). The plugin starts with **Gemini 3.7 Flash** through **OpenRouter**: paste your
+3. At every start, a bar at the top asks you to check your AI model; until a key is set up, it says **Set up your AI
+   model first**. Click **Open Settings** in that bar (or **Settings…**, top right). The plugin starts with **GPT-5.6 Luna** through **OpenRouter**: paste your
    OpenRouter API key further down and click **Use for this session only** (or **Save to Keychain** on macOS), then
    **Test connection**. To use another model, choose a **Provider** (OpenRouter, OpenAI, Anthropic, Google Gemini or a
    local Ollama) and a **Model**; Ollama needs no key. The plugin remembers the provider and model for next time; the
@@ -117,7 +124,7 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.30.jar`: the plugin.
+- `protege-ontology-copilot-0.9.31.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos, screenshots and the demo GIF used here.
 
