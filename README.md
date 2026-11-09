@@ -15,7 +15,7 @@ in Change Preview first; nothing changes in your ontology until you press Apply.
   <img src="images/demo.gif" width="760" alt="Ontology Copilot in Protégé: Purpose & scope is filled in, a method is recommended and approved, GPT-5.6 Luna drafts the ontology, the draft is reviewed in Change Preview and the Graph and applied, then the chat adds three subclasses of Bike">
 </p>
 
-**New in 0.9.31:** the default model is **GPT-5.6 Luna** through OpenRouter, and at every start a bar asks you to check your AI model. Step 2 offers only the inputs the chosen method uses, and you type CQs straight into a box called **CQs (one per line)**; in a small window that box no longer gets squeezed. Direct NL→OWL keeps running when you look at another step, and **Start over** saves your ontology and opens a new, empty one. Clearer names in step 1: **Ontology engineering methodology** (only used to recommend a method) and **LLM-based Ontology Generation Method**.
+**New in 0.9.32:** the chat starts with examples you can click, and **What can I ask Ontology Copilot?** below the box lists what it can and can't do; **Enter** sends. In a hurry, ask the chat for a first draft instead of going through the steps. After a translation is applied, one click shows its labels in Protégé. The tutorial goes on inside **Model & Settings** (top right). The checks have one name each, under **Ontology draft quality check**, and the Run NeOn-GPT window always shows whether OOPS! and the file check will run, with a button to change it. Ontogenia's pattern suggestions are chosen in step 2 (**Suggest by**).
 
 Already installed it with Option 1? **File ▸ Check for plugins…** offers the update.
 
@@ -59,7 +59,7 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.31.jar`](protege-ontology-copilot-0.9.31.jar).
+1. Download [`protege-ontology-copilot-0.9.32.jar`](protege-ontology-copilot-0.9.32.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -77,23 +77,25 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
 
    <img src="images/install/4-copilot-tab.png" width="640" alt="The Ontology Copilot tab at a first start: the bar asking to set up the AI model, the four steps, the chat on the right">
 
-2. A short guided tour starts the first time. Skip it, or click through its 11 steps; the **Tutorial** button (top
-   right) starts it again.
+2. A short guided tour starts the first time. Skip it, or click through its 15 steps (the last four are inside
+   **Model & Settings**); the **Tutorial** button (top right) starts it again.
 
    <img src="images/install/5b-welcome-card.png" width="320" alt="The guided tour's welcome card">
 
 3. At every start, a bar at the top asks you to check your AI model; until a key is set up, it says **Set up your AI
-   model first**. Click **Open Settings** in that bar (or **Settings…**, top right). The plugin starts with **GPT-5.6 Luna** through **OpenRouter**: paste your
-   OpenRouter API key further down and click **Use for this session only** (or **Save to Keychain** on macOS), then
-   **Test connection**. To use another model, choose a **Provider** (OpenRouter, OpenAI, Anthropic, Google Gemini or a
+   model first**. Click **Open Model & Settings** in that bar (or **Model & Settings**, top right). The plugin starts
+   with **GPT-5.6 Luna** through **OpenRouter**: paste your OpenRouter API key under **API key**, right below the model,
+   and click **Use for this session only** (or **Save to Keychain** on macOS), then **Test connection**. To use another model, choose a **Provider** (OpenRouter, OpenAI, Anthropic, Google Gemini or a
    local Ollama) and a **Model**; Ollama needs no key. The plugin remembers the provider and model for next time; the
    key only if you saved it to the Keychain.
 
-   Further down, under **Quality check**, click **Install RDFLib** if it says the file check isn't installed. It needs
-   Python 3 and internet, and installs only into the plugin's own folder (`~/.ontology-copilot/python`). Without it
-   everything still works; the file check is skipped, and the plugin says so wherever it matters. The same section has **Check drafts
-   for common modelling mistakes (OOPS!)**; the plugin also asks about it when your first NeOn-GPT or Ontogenia draft
-   arrives.
+   Further down, under **Ontology draft quality check**, click **Install RDFLib** if it says the file check isn't
+   installed. RDFLib is a free Python library that reads each draft's file strictly: it catches small typing mistakes,
+   such as a missing dot, that Protégé's own reader quietly accepts. Installing it takes about a minute, needs Python 3
+   and internet, and installs only into the plugin's own folder (`~/.ontology-copilot/python`). Without it everything
+   still works; the file check is skipped ("⚠ One check was skipped"), and the plugin says so wherever it matters. The
+   same section has the **Modeling mistakes check (OOPS!)**; the plugin also asks about it when your first NeOn-GPT or
+   Ontogenia draft arrives, and the Run NeOn-GPT window can turn it on or off.
 
    <img src="images/install/6-settings.png" width="460" alt="Ontology Copilot settings: provider, model, endpoint">
 
@@ -101,11 +103,17 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
    the bottom of each page; when Next is grey, the reason is written beside it. Nothing changes in your ontology until
    you click **Apply** in step 4, and **Undo** there takes it out again.
 
+5. The chat on the right works on any step. Press **Enter** to send (**Shift+Enter** for a new line). Not sure what to
+   ask? Click one of its examples, or **What can I ask Ontology Copilot?** below the box. In a hurry, skip the steps and
+   ask the chat for a first draft, for example *Draft a small ontology about bike sharing*; for a more thorough draft
+   with quality checks, use the steps.
+
 ## Your data
 
 - Your API key stays on your computer: in the macOS Keychain, or only for the current session.
 - The plugin keeps a local activity log of what you do in it. It is never sent anywhere (see below).
-- OOPS! Check: only if you agree (the plugin asks once; change it in Settings ▸ Quality check), each NeOn-GPT and Ontogenia
+- Modeling mistakes check (OOPS!): only if you agree (the plugin asks once; change it in Model & Settings ▸ Ontology draft
+  quality check, or in the Run NeOn-GPT window), each NeOn-GPT and Ontogenia
   draft is sent with your ontology to the OOPS! service at oops.linkeddata.es (Universidad Politécnica de Madrid).
   Without a yes, nothing is sent there unless you click **Check now** for a single draft.
 
@@ -113,9 +121,9 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
 
 The activity log is **on by default**.
 
-- **Switch it on or off:** click **Settings…** (top right of the plugin), and tick or untick
+- **Switch it on or off:** click **Model & Settings** (top right of the plugin), and under **Privacy** tick or untick
   **"Keep a local activity log (for research you may share; nothing is sent)"**.
-- **Find it:** in the same Settings window, click **Open activity folder**. The folder is
+- **Find it:** in the same window, click **Open activity folder**. The folder is
   `~/Documents/OntologyCopilot/activity` on macOS and Linux, and `C:\Users\<name>\Documents\OntologyCopilot\activity`
   on Windows.
 - **What's in it:** two files per session, named after the time it started: `…-events.jsonl` (what you did, one line
@@ -124,7 +132,7 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.31.jar`: the plugin.
+- `protege-ontology-copilot-0.9.32.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos, screenshots and the demo GIF used here.
 
