@@ -15,7 +15,7 @@ in Change Preview first; nothing changes in your ontology until you press Apply.
   <img src="images/demo.gif" width="760" alt="Ontology Copilot in Protégé: Purpose & scope is filled in, a method is recommended and approved, GPT-5.6 Luna drafts the ontology, the draft is reviewed in Change Preview and the Graph and applied, then the chat adds three subclasses of Bike">
 </p>
 
-**New in 0.9.32:** the chat starts with examples you can click, and **What can I ask Ontology Copilot?** below the box lists what it can and can't do; **Enter** sends. In a hurry, ask the chat for a first draft instead of going through the steps. After a translation is applied, one click shows its labels in Protégé. The tutorial goes on inside **Model & Settings** (top right). The checks have one name each, under **Ontology draft quality check**, and the Run NeOn-GPT window always shows whether OOPS! and the file check will run, with a button to change it. Ontogenia's pattern suggestions are chosen in step 2 (**Suggest by**).
+**New in 0.9.33:** Purpose & scope asks **what you already have** (competency questions, user stories, documents, ontologies to reuse, design patterns or a database schema), and the recommended method follows from it: a database schema leads to **RIGOR-Lite**, design patterns to **Ontogenia**, ontologies to reuse to **NeOn-GPT**. The recommendation also says which of your material the method doesn't use. Choose a **Label language** and every method writes its labels and comments in it. **Next** shows in red what is still missing, every optional field says "(optional)", and info windows open big enough for their text.
 
 Already installed it with Option 1? **File ▸ Check for plugins…** offers the update.
 
@@ -59,7 +59,7 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.32.jar`](protege-ontology-copilot-0.9.32.jar).
+1. Download [`protege-ontology-copilot-0.9.33.jar`](protege-ontology-copilot-0.9.33.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -100,8 +100,14 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
    <img src="images/install/6-settings.png" width="460" alt="Ontology Copilot settings: provider, model, endpoint">
 
 4. Follow the steps at the top: **1 Purpose & scope › 2 Inputs › 3 Generate › 4 Review & apply**. **Next** and **Back** are at
-   the bottom of each page; when Next is grey, the reason is written beside it. Nothing changes in your ontology until
+   the bottom of each page; if something is still missing, Next shows it in red. Nothing changes in your ontology until
    you click **Apply** in step 4, and **Undo** there takes it out again.
+
+   In **Purpose & scope**, fill in the domain and tick what you already have (competency questions, documents,
+   ontologies to reuse, design patterns or a database schema); the recommended method follows from it: a database
+   schema leads to **RIGOR-Lite**, design patterns to **Ontogenia**, ontologies to reuse to **NeOn-GPT**. Choose a
+   **Label language** there to have the labels and comments written in it. Every field marked "(optional)" can stay
+   empty.
 
 5. The chat on the right works on any step. Press **Enter** to send (**Shift+Enter** for a new line). Not sure what to
    ask? Click one of its examples, or **What can I ask Ontology Copilot?** below the box. In a hurry, skip the steps and
@@ -132,7 +138,7 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.32.jar`: the plugin.
+- `protege-ontology-copilot-0.9.33.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos, screenshots and the demo GIF used here.
 
