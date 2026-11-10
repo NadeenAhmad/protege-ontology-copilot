@@ -15,7 +15,7 @@ in Change Preview first; nothing changes in your ontology until you press Apply.
   <img src="images/demo.gif" width="760" alt="Ontology Copilot in Protégé: Purpose & scope is filled in, a method is recommended and approved, GPT-5.6 Luna drafts the ontology, the draft is reviewed in Change Preview and the Graph and applied, then the chat adds three subclasses of Bike">
 </p>
 
-**New in 0.9.35:** Purpose & scope asks **what you already have** (competency questions, user stories, documents, ontologies to reuse, design patterns or a database schema), and the recommended method follows from it: a database schema leads to **RIGOR-Lite**, design patterns to **Ontogenia**, ontologies to reuse to **NeOn-GPT**. The recommendation updates as you fill in the page and says when your methodology choice is not followed. Choose a **Label language** and every method writes its labels and comments in it. **Next** shows in red what is still missing, every optional field says "(optional)", and info windows open big enough for their text. Ontogenia now shows its progress with the time, like the other methods, and installing RDFLib checks the draft under review right away.
+**New in 0.9.36:** Purpose & scope asks **what you already have** (competency questions, user stories, documents, ontologies to reuse, design patterns or a database schema), and the recommended method follows from it: a database schema leads to **RIGOR-Lite**, design patterns to **Ontogenia**, ontologies to reuse to **NeOn-GPT**. The recommendation updates as you fill in the page and says when your methodology choice is not followed. Choose a **Label language** and every method writes its labels and comments in it. **Next** shows in red what is still missing, every optional field says "(optional)", and info windows open big enough for their text. Ontogenia now shows its progress with the time, like the other methods, installing RDFLib checks the draft under review right away, and the chat can add classes under Thing (for example in a new, empty ontology).
 
 Already installed it with Option 1? **File ▸ Check for plugins…** offers the update.
 
@@ -59,7 +59,7 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.35.jar`](protege-ontology-copilot-0.9.35.jar).
+1. Download [`protege-ontology-copilot-0.9.36.jar`](protege-ontology-copilot-0.9.36.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -139,7 +139,7 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.35.jar`: the plugin.
+- `protege-ontology-copilot-0.9.36.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos, screenshots and the demo GIF used here.
 
