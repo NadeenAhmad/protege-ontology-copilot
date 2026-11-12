@@ -23,7 +23,8 @@ Already installed it with Option 1? **File ▸ Check for plugins…** offers the
 
 > **Tested with Protégé 5.6.7 on macOS only.** It may not work with other Protégé versions.
 
-There are two ways. Option 1 needs no files or folders; if it doesn't work for you, use Option 2.
+There are three ways. Option 1 needs no files or folders; if it doesn't work for you, use Option 2. Option 3 is a
+separate copy of Protégé with the Copilot already in it: unzip it and start it; a Protégé you already have stays as it is.
 
 ### Option 1: Protégé's plugin installer
 
@@ -69,6 +70,27 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
    <img src="images/install/7-plugins-folder.png" width="480" alt="Protégé's plugins folder with the Ontology Copilot jar">
 
 3. Start Protégé.
+
+### Option 3: Protégé with the Copilot already in it
+
+Protégé 5.6.7 with its own Java and the Copilot inside. Nothing else to install.
+
+- **Mac:** download
+  [`Protege-Copilot-0.9.38-mac.zip`](https://github.com/NadeenAhmad/protege-ontology-copilot/releases/download/v0.9.38/Protege-Copilot-0.9.38-mac.zip)
+  (120 MB), unzip it and double-click **Protégé Copilot**. If macOS says it can't open the app: close the message,
+  open **System Settings ▸ Privacy & Security**, scroll down and click **Open Anyway** (only the first time).
+- **Windows** (not tested yet): download
+  [`Protege-Copilot-0.9.38-windows.zip`](https://github.com/NadeenAhmad/protege-ontology-copilot/releases/download/v0.9.38/Protege-Copilot-0.9.38-windows.zip)
+  (117 MB), right-click it ▸ **Extract All**, then double-click `Protege.exe` in the new folder (it doesn't start from
+  inside the zip). If Windows says "Windows protected your PC": click **More info ▸ Run anyway** (only the first
+  time).
+
+Then click the **Ontology Copilot** tab (or **Window ▸ Tabs ▸ Ontology Copilot**).
+
+This copy loads only its own plugins, and on a Mac it is called Protégé Copilot, so it doesn't mix with a Protégé you
+already have. Both use the same Protégé and Copilot settings on your computer (preferences, your model and API key,
+the activity log). To update, download the new zip. It is Protégé's official 5.6.7 release (Stanford University,
+BSD 2-Clause license) with the Copilot added.
 
 ## First start
 
