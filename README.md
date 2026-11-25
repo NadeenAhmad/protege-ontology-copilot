@@ -164,6 +164,7 @@ The activity log is **on by default**.
 - `protege-ontology-copilot-0.9.38.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos, screenshots and the demo GIF used here.
+- [`docs/RECOMMENDER.md`](docs/RECOMMENDER.md): how Ontology Copilot recommends a generation method.
 
 ## Licence
 
