@@ -4,6 +4,17 @@ In step 1, *Purpose & scope*, **Recommend a method** suggests one of the four on
 
 It is only a suggestion. You can pick any other method under *LLM-based Ontology Generation Method* before you click **Approve method**.
 
+## The methods and their papers
+
+Each method builds on published research. The recommendation names the same papers.
+
+- **Direct NL→OWL** is inspired by da Silva et al. (2024): da Silva, L. M. V., Köcher, A., Gehlhoff, F., & Fay, A. (2024). "On the Use of Large Language Models to Generate Capability Ontologies." 2024 IEEE 29th International Conference on Emerging Technologies and Factory Automation (ETFA), pp. 1–8. IEEE. https://doi.org/10.1109/ETFA61755.2024.10710775 (This plugin applies the paper's single-prompt generation to any domain, not only capability ontologies.)
+- **NeOn-GPT** has two papers, the original pipeline and the extended NeOn-GPT:
+  - Fathallah, Nadeen, Arunav Das, Stefano De Giorgis, Andrea Poltronieri, Peter Haase, and Liubov Kovriguina. "NeOn-GPT: A Large Language Model-Powered Pipeline for Ontology Learning." The Semantic Web: ESWC 2024 Satellite Events, LNCS 15344 (2025).
+  - Fathallah, Nadeen, et al. "Extended NeOn-GPT: Advancing LLM-Powered Ontology Learning Through Ontology Reuse and Automated Verification." Semantic Web 17.4 (2026): 22104968261453138.
+- **Ontogenia**: Lippolis, Anna Sofia, Miguel Ceriani, Sara Zuppiroli, and Andrea Giovanni Nuzzolese. "Ontogenia: Ontology Generation with Metacognitive Prompting in Large Language Models." The Semantic Web: ESWC 2024 Satellite Events, LNCS 15344, pp. 259–265 (2025).
+- **RIGOR-Lite** builds on RIGOR: Fathallah, Nadeen, et al. "Retrieval-Augmented Generation of Ontologies from Relational Databases." ISWC (2026). RIGOR's code: https://github.com/NadeenAhmad/RIGOR
+
 ## What each method needs
 
 | Method | Needs | Can also use |
