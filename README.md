@@ -76,11 +76,11 @@ from Protégé's `plugins` folder first, so Protégé doesn't find two.
 Protégé 5.6.7 with its own Java and the Copilot inside. Nothing else to install.
 
 - **Mac:** download
-  [`Protege-Copilot-0.9.38-mac.zip`](https://github.com/NadeenAhmad/protege-ontology-copilot/releases/download/v0.9.38/Protege-Copilot-0.9.38-mac.zip)
+  [`Protege-Copilot-0.9.39-mac.zip`](https://github.com/NadeenAhmad/protege-ontology-copilot/releases/download/v0.9.39/Protege-Copilot-0.9.39-mac.zip)
   (120 MB), unzip it and double-click **Protégé Copilot**. If macOS says it can't open the app: close the message,
   open **System Settings ▸ Privacy & Security**, scroll down and click **Open Anyway** (only the first time).
 - **Windows** (not tested yet): download
-  [`Protege-Copilot-0.9.38-windows.zip`](https://github.com/NadeenAhmad/protege-ontology-copilot/releases/download/v0.9.38/Protege-Copilot-0.9.38-windows.zip)
+  [`Protege-Copilot-0.9.39-windows.zip`](https://github.com/NadeenAhmad/protege-ontology-copilot/releases/download/v0.9.39/Protege-Copilot-0.9.39-windows.zip)
   (117 MB), right-click it ▸ **Extract All**, then double-click `Protege.exe` in the new folder (it doesn't start from
   inside the zip). If Windows says "Windows protected your PC": click **More info ▸ Run anyway** (only the first
   time).
